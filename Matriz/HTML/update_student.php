@@ -39,8 +39,8 @@
 
 <div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-list"></i>Forms</a>
   <ul>
-    <li><a href="index.php"><i class="icon icon-home"></i> <span>All Students</span></a> </li>
-    <li><a href="add_student.html"><i class="icon icon-home"></i> <span>Add Student</span></a> </li>
+    <li><a href="index.php"><i class="icon icon-home"></i> <span>All Studs</span></a> </li>
+    <li><a href="add_student.html"><i class="icon icon-home"></i> <span>Add Stud</span></a> </li>
     
   </ul>
 </div>
@@ -87,7 +87,7 @@
               </div>
             </div>
             <div class="form-actions">
-              <button type="submit" name="save" class="btn btn-success">update</button>
+              <button type="submit" name="save" class="btn btn-success">update student</button>
             </div>
           </form>
         </div>
@@ -130,9 +130,9 @@ if(isset($_POST['save'])){
     $upage=$_POST['age'];
     $update=mysqli_query($conn,"update student set fname='$upfname',class='$upclass',adm='$upadm',age='$age' where id='$id' ")or die(mysqli_error($conn));
      if($update){
-         echo"success";
+         echo"Updated successfully";
      }else{
-         echo"fail";
+         echo"failed";
      }
 
 }
